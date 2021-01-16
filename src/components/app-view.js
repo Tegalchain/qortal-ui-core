@@ -80,23 +80,8 @@ class AppView extends connect(store)(LitElement) {
 
         </style>
         <app-drawer-layout responsive-width='${getComputedStyle(document.body).getPropertyValue('--layout-breakpoint-desktop')}' fullbleed >
-            <app-drawer swipe-open slot="drawer" id="appdrawer" style="position: absolute; right: 0; left: auto;">
-                <app-header-layout>
-                    <div id="sideBar">
-                        <div>
-                            <wallet-profile></wallet-profile>
 
-                            <sidenav-menu></sidenav-menu>
-                        </div>
-
-                        <div>
-                            <app-info></app-info>
-                        </div>
-                    </div>
-                </app-header-layout>
-            </app-drawer>
-
-            <app-header-layout style="height: var(--window-height); left: -260px; right: 260px;">
+            <app-header-layout style="height: var(--window-height);">
 
                 <app-header id='appHeader' slot="header" style="left: 0px; right:260px;" fixed>
                     <app-toolbar>
@@ -109,6 +94,8 @@ class AppView extends connect(store)(LitElement) {
                             </span>
                         </div>
 
+                        <sidenav-menu style="position: absolute; margin: 0 0 0 100px; height: 28px;"></sidenav-menu>
+
                         <div style="display:inline">
                             <paper-icon-button icon="icons:settings" @click=${ () => this.openSettings()} title="Settings" ></paper-icon-button>
                         </div>
@@ -116,7 +103,15 @@ class AppView extends connect(store)(LitElement) {
                 </app-header>
 
                 <show-plugin></show-plugin>
-                    
+
+                <div style="width: 100%;background-color: #b5f7f4;height: 100px;display: flex;z-index: 9999;visibility: visible;position: absolute;bottom: 0px;">
+                    <div style="position: absolute; left: 10px;">
+                        <wallet-profile></wallet-profile>
+                    </div>        
+                    <div style="position: absolute; right: 10px;">
+                        <app-info></app-info>
+                    </div>
+                </div>
             </app-header-layout>
         </app-drawer-layout>
         <user-settings></user-settings>
