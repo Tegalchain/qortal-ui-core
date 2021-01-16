@@ -26,14 +26,16 @@ class SidenavMenu extends connect(store)(LitElement) {
           -webkit-border-radius: 2px;
           width: 100%;
           outline: none;
+          background-color: #b5f7f4;
         }
         .mcd-menu li {
           position: relative;
           /* height:48px; */
-          line-height: 48px;
+          /* line-height: 48px; */
           outline: none;
           padding: 2px;
           list-style: none;
+          display: inline-flex;
         }
         .mcd-menu li a {
           display: block;
@@ -41,20 +43,20 @@ class SidenavMenu extends connect(store)(LitElement) {
           padding-left: 20px;
           color: var(--mdc-theme-on-surface);
           text-align: left;
-          height: 48px;
+          height: 28px;
           position: relative;
           border-bottom: 1px solid #EEE;
           outline: none;
         }
         .mcd-menu li a mwc-icon {  
           float: left;
-          margin: 0 10px 0 0;
-          padding-top: 14px;
-          padding-right: 9px;
+          margin: 0 7px 0 0;
+          padding-right: 3px;
         }
 
         .mcd-menu li a span {
-          display: block;
+          /* display: block; */
+          display: inline-block;
           text-transform: uppercase;
           outline: none;
         }
@@ -121,27 +123,28 @@ class SidenavMenu extends connect(store)(LitElement) {
           -moz-transition: all 300ms linear;
           -webkit-transition: all 300ms linear;
           z-index: 999999999;
-          left:280px;
-          top: 0px;
-          border-left: 4px solid #515151;
+          top: 45px;
+          border-top: 5px solid #515151;
           outline: none;
         }
         .mcd-menu li ul:before {
           content: "";
           position: absolute;
-          top: 25px;
-          left: -9px;
-          border-right: 5px solid #515151;
-          border-bottom: 5px solid transparent;
-          border-top: 5px solid transparent;
+          left: 25px;
+          top: -9px;
+          /* border-left: 5px solid #515151; */
+          /* border-bottom: 5px solid transparent; */
+          /* border-top: 5px solid transparent; */
           outline: none;
+          border-bottom: 5px solid rgb(81, 81, 81);
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
         }
         .mcd-menu li:hover > ul,
         .mcd-menu li ul li:hover > ul {
           display: block;
           opacity: 1;
           visibility: visible;
-          left:260px;
           outline: none;
         }
 
@@ -152,6 +155,7 @@ class SidenavMenu extends connect(store)(LitElement) {
           border-bottom: 1px solid #EEE;
           height: auto;
           outline: none;
+          padding-left: 5px;
         }
         .mcd-menu li ul li a mwc-icon {
           /* font-size: 16px; */
@@ -169,11 +173,12 @@ class SidenavMenu extends connect(store)(LitElement) {
           content: "";
           position: absolute;
           top: 15px;
-          left: -9px;
-          border-right: 5px solid #515151;
+          right: -9px;
+          border-left: 5px solid #515151;
           border-bottom: 5px solid transparent;
           border-top: 5px solid transparent;
           outline: none;
+          top: -9px;
         }
         .mcd-menu li ul li:hover > ul {
           top: 0px;

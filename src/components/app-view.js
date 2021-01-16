@@ -43,11 +43,12 @@ class AppView extends connect(store)(LitElement) {
                 box-shadow: var(--shadow-2);
             }
             app-toolbar {
-                background: var(--mdc-theme-surface);
+                background: #b5f7f4;
                 color: var(--mdc-theme-on-surface);
             }
 
             #sideBar {
+                background-color: #b5f7f4;
                 height: 100vh;
                 display: flex;
                 flex: 1 1;
@@ -79,34 +80,21 @@ class AppView extends connect(store)(LitElement) {
 
         </style>
         <app-drawer-layout responsive-width='${getComputedStyle(document.body).getPropertyValue('--layout-breakpoint-desktop')}' fullbleed >
-            <app-drawer swipe-open slot="drawer" id="appdrawer">
-                <app-header-layout>
-                    <div id="sideBar">
-                        <div>
-                            <wallet-profile></wallet-profile>
-
-                            <sidenav-menu></sidenav-menu>
-                        </div>
-
-                        <div>
-                            <app-info></app-info>
-                        </div>
-                    </div>
-                </app-header-layout>
-            </app-drawer>
 
             <app-header-layout style="height: var(--window-height);">
 
-                <app-header id='appHeader' slot="header" fixed>
+                <app-header id='appHeader' slot="header" style="left: 0px; right:260px;" fixed>
                     <app-toolbar>
 
                         <paper-icon-button class="menu-toggle-button" drawer-toggle icon="menu"></paper-icon-button>
 
                         <div main-title>
                             <span class="qora-title">
-                                <img src="${this.config.coin.logo}" style="height:32px; padding-left:12px;">
+                                <img src="${this.config.coin.logo}" style="height:55px; padding-left:12px;">
                             </span>
                         </div>
+
+                        <sidenav-menu style="position: absolute; margin: 0 0 0 100px; height: 28px;"></sidenav-menu>
 
                         <div style="display:inline">
                             <paper-icon-button icon="icons:settings" @click=${ () => this.openSettings()} title="Settings" ></paper-icon-button>
@@ -115,7 +103,15 @@ class AppView extends connect(store)(LitElement) {
                 </app-header>
 
                 <show-plugin></show-plugin>
-                    
+
+                <div style="width: 100%;background-color: #b5f7f4;height: 100px;display: flex;z-index: 9999;visibility: visible;position: absolute;bottom: 0px;">
+                    <div style="position: absolute; left: 10px;">
+                        <wallet-profile></wallet-profile>
+                    </div>        
+                    <div style="position: absolute; right: 10px;">
+                        <app-info></app-info>
+                    </div>
+                </div>
             </app-header-layout>
         </app-drawer-layout>
         <user-settings></user-settings>
