@@ -325,7 +325,7 @@ class CreateAccountSection extends connect(store)(LitElement) {
                     <div page="info">
                         <div id="infoContent" class="section-content" style="">
                             <br>
-                            <h3 style="text-align:center; margin-top: 0; font-weight: 100; font-family: 'Roboto Mono', monospace;">Create account</h3>
+                            <h3 style="text-align:center; margin-top: 0; font-weight: 100; font-family: "Suisse Int'l", Aeonik;">Create account</h3>
                             <p>
                                 Welcome to QORT, you will find it to be similar to that of an RPG game, 
                                 you, as a minter on the QORT network (if you choose to become one) will have the chance to level your account up, 

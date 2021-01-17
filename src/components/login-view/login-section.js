@@ -265,7 +265,7 @@ class LoginSection extends connect(store)(LitElement) {
                             <div style="text-align:center;">
                                 <mwc-icon id='accountIcon' style=" padding-bottom:24px;">account_circle</mwc-icon>
                                 <br>
-                                <span style="font-size:14px; font-weight:100; font-family: 'Roboto Mono', monospace;">${this.selectedWallet.address0}</span>
+                                <span style="font-size:14px; font-weight:100; font-family: "Suisse Int'l", Aeonik;">${this.selectedWallet.address0}</span>
                             </div>
                         </div>
 
