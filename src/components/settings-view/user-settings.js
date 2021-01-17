@@ -85,7 +85,7 @@ class UserSettings extends connect(store)(LitElement) {
             }
 
             .leftBar {
-                background-color: #65a8dd;
+                background-color: #FFFDD0;
                 color: #333333;
                 border: 1px solid #a1a1a1;
                 padding: 20px 0 0 0;
@@ -151,7 +151,7 @@ class UserSettings extends connect(store)(LitElement) {
             /* Main Profile Page */
 
             .mainPage {
-                background-color: #65a8dd;
+                background-color: #FFFDD0;
                 color: #333333;
                 border: 1px solid #a1a1a1;
                 padding: 20px 0 10px 0;

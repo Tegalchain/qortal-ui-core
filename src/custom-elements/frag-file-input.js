@@ -19,7 +19,7 @@ class FragFileInput extends LitElement {
         return css`
             #drop-area {
                 border: 2px dashed #ccc;
-                font-family: 'Times New Roman', serif;
+                font-family: "Suisse Int'l", Aeonik;
                 padding: 20px;
             }
             #trigger:hover {

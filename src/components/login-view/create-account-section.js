@@ -267,7 +267,7 @@ class CreateAccountSection extends connect(store)(LitElement) {
 
                 #download-area {
                     border: 2px dashed #ccc;
-                    font-family: 'Times New Roman', serif;
+                    font-family: "Suisse Int'l", Aeonik;
                     padding: 10px;
                 }
                 #trigger:hover {

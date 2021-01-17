@@ -39,7 +39,7 @@ class AppStyles extends LitElement {
 
                     --paper-input-container-focus-color: var(--mdc-theme-secondary);
                     
-                    font-family: 'Times New Roman', serif;
+                    font-family: "Suisse Int'l", Aeonik;
                     color: var(--mdc-theme-on-surface);
                     --window-height: ${this.windowHeight};
 
