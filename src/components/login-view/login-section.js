@@ -192,7 +192,7 @@ class LoginSection extends connect(store)(LitElement) {
                 }
                 iron-pages h3{
                     color: #333;
-                    font-family: "Roboto mono", monospace;
+                    font-family: "Suisse Int'l", Aeonik;
                     font-weight: 300;
                 }
                 #pagesContainer {
