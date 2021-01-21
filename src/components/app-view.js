@@ -90,11 +90,11 @@ class AppView extends connect(store)(LitElement) {
 
                         <div main-title>
                             <span class="qora-title">
-                                <img src="${this.config.coin.logo}" style="height:55px; padding-left:12px;">
+                                <img src="${this.config.coin.logo}" style="height:55px; padding-left:20px;">
                             </span>
                         </div>
 
-                        <sidenav-menu style="position: absolute; margin: 0 0 0 100px; height: 28px;"></sidenav-menu>
+                        <sidenav-menu style="position: absolute; width: 90%; right: 5%; height: 28px;"></sidenav-menu>
 
                         <div style="display:inline">
                             <paper-icon-button icon="icons:settings" @click=${ () => this.openSettings()} title="Settings" ></paper-icon-button>
