@@ -26,7 +26,7 @@ class SidenavMenu extends connect(store)(LitElement) {
           -webkit-border-radius: 2px;
           width: 100%;
           outline: none;
-          background-color: #b5f7f4;
+          background: rgba(181, 247, 244, 0);
         }
         .mcd-menu li {
           position: relative;
@@ -45,7 +45,6 @@ class SidenavMenu extends connect(store)(LitElement) {
           text-align: left;
           height: 28px;
           position: relative;
-          border-bottom: 1px solid #EEE;
           outline: none;
         }
         .mcd-menu li a mwc-icon {  
@@ -76,8 +75,7 @@ class SidenavMenu extends connect(store)(LitElement) {
         }
 
         .mcd-menu li:hover > a {
-            background: #f8f8f8;
-            color: #515151;
+            color: black/*#515151*/;
         }
         .mcd-menu li a.active {
           position: relative;
